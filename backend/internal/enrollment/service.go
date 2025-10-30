@@ -250,7 +250,7 @@ func (s *Service) UpdateEnrollmentStatus(enrollmentID, action, responseMessage s
 			status = $2,
 			response_message = $3,
 			updated_at = NOW(),
-			approved_at = CASE WHEN $2::text = 'enrolled' THEN NOW() ELSE approved_at END
+			approved_at = CASE WHEN $2 = 'enrolled' THEN NOW() ELSE approved_at END
 		WHERE id = $1
 	`
 
