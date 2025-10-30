@@ -1,0 +1,17 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+project_id   = "your-gcp-project-id"
+project_name = "civic-weave"
+region       = "us-central1"
+environment  = "dev"
+
+# Initial deployment uses placeholder images
+# After building and pushing your images, update these:
+# backend_image  = "us-central1-docker.pkg.dev/your-gcp-project-id/civic-weave-docker/backend:latest"
+# frontend_image = "us-central1-docker.pkg.dev/your-gcp-project-id/civic-weave-docker/frontend:latest"
+
+# Database configuration
+db_tier = "db-f1-micro" # Use db-custom-2-7680 or higher for production
+
+# Security
+enable_public_access = true # Set to false for production
